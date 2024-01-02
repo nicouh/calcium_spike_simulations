@@ -135,9 +135,8 @@ double up_t_i(Parameters params, int state, double time){
 //down rate
 double down_t_i(double down_rate, int state){
     double out;
-
     out=down_rate*state;
-
+    
     return out;
 }
 
@@ -146,6 +145,7 @@ bool is_num(const std::string& str) {
     std::istringstream iss(str);
     double value;
     iss >> std::noskipws >> value;
+    
     return iss.eof() && !iss.fail();
 }
 
@@ -205,7 +205,6 @@ int main(int argc, char* argv[])
     params.recovery_mode       = argv[2];  //normal or hill
 
     //check if other aguments are not strings.
-    //attempt to convert to int and floats. if errors, its a string.
     for (int i = 3; i < argc; ++i) {
         if (!is_num(argv[i])) {
             cout << "   \033[1;31mError: \033[0m Some argument contains a string: " << argv[i] << ". Aborting." << endl;
@@ -394,7 +393,6 @@ int main(int argc, char* argv[])
         fpts_buffer={};
 
         //write current FPTs (sum of buffers) to file all save_intervall done iterations.
-        //with save_intervall=1 and e.g. large g, Nt, Sp, ...  it might slow down MaxCluster due to many file operations
         if (done_num % sys_params.save_intervall == 0) {
             save_FPTs_vector(out_path_file, fpts, sys_params, params);
             fpts = {};
