@@ -1,7 +1,6 @@
-# include <cstdio>
-# include <cstdlib>
-# include <cmath>
-
+#include <cstdio>
+#include <cstdlib>
+#include <cmath>
 #include <iostream> 
 //#include <iterator>
 //#include <algorithm>
@@ -14,8 +13,6 @@
 #include <vector>
 #include <experimental/filesystem>
 
-using namespace std;
-
 //** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
 //** Victor Nicolai Friedhoff,  May 2023             **
 //** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
@@ -26,6 +23,7 @@ using namespace std;
 //** Friedhoff et. al. (BPJ, 2023).                  **
 //** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
 
+using namespace std;
 const string version_str="v1.00";
 
 //***************** Classes ******************
