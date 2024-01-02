@@ -142,12 +142,6 @@ double down_t_i(double down_rate, int state){
 }
 
 //for proper argument handling
-//bool is_num(const char* str) {
-    //char* endptr;
-    //strtod(str, &endptr);
-
-    // check if the entire string was successfully converted and it's not a hexadecimal number
-    //return (*str != '\0' && *endptr == '\0' && (str[0] != '0' && str[1] != 'x'));
 bool is_num(const std::string& str) {
     std::istringstream iss(str);
     double value;
